@@ -60,16 +60,20 @@
 </head>
 <body>
     <partial name="_Header" />
-    <partial name="_HeroSlider" />
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+    @if (ViewBag.ShowHeader == true)
+    {
+        <partial name="_HeroSlider" />
+    }
+
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
     <partial name="_Footer" />
     <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
         <i class="fab fa-whatsapp my-float"></i>
     </a>
     <!-- Scroll To Top Start -->
-    <div id="scroll-to-top" >
+    <div id="scroll-to-top">
         <i class="fas fa-angle-up"></i>
     </div>
     <!-- Scroll To Top End -->
@@ -105,6 +109,11 @@
     <script src="~/assets/vendor/paroller/jquery.paroller-1.4.6.min.js"></script>
     <!-- jQuery Validation Js -->
     <script src="~/assets/vendor/jquery-validation/jquery.validate-1.16.9.min.js"></script>
+
+    <!-- Google Map API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=&callback=myMap"></script>
+    <!-- Google Map JS -->
+    <script src="~/assets/js/map.js"></script>
     <!-- Main JS -->
     <script src="~/assets/js/main.js"></script>
     @await RenderSectionAsync("Scripts", required: false)

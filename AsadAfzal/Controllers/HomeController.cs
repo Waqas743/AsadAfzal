@@ -15,6 +15,52 @@ namespace AsadAfzal.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.ShowHeader = true;
+            return View();
+        }
+
+        public IActionResult AboutUs()
+        {
+            ViewBag.ShowHeader = false;
+            return View();
+        }
+
+        public IActionResult ContactUs()
+        {
+
+            ViewBag.ShowHeader = false;
+            return View();
+        }
+        public IActionResult Gallery()
+        {
+
+            return View();
+        }
+        public IActionResult Blogs()
+        {
+            ViewBag.ShowHeader = false;
+            return View();
+        }
+
+        public IActionResult BlogDetail(Guid id)
+        {
+            return View();
+        }
+
+        public IActionResult Projects()
+        {
+            ViewBag.ShowHeader = false;
+            return View();
+        }
+
+        public IActionResult ProjectDetail(Guid id)
+        {
+            return View();
+        }
+
+        public IActionResult Services()
+        {
+            ViewBag.ShowHeader = false;
             return View();
         }
 
