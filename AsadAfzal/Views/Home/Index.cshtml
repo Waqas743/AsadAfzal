@@ -2,7 +2,657 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+<!-- Rating Section Start -->
+<section id="rating-section">
+    <div class="rating-item bg-one">
+        <div class="icon">
+            <img src="~/assets/img/icons/design.png" class="default-icon" alt="">
+            <img src="~/assets/img/icons/design-light.png" class="hover-icon" alt="">
+        </div>
+        <h3>Design our own</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur ng elit, sed do eiusmod tempor incididunt ut re magna aliqu enim ad minim</p>
+        <span class="rating">93%</span>
+    </div>
+    <div class="rating-item bg-two">
+        <div class="icon">
+            <img src="~/assets/img/icons/award.png" class="default-icon" alt="">
+            <img src="~/assets/img/icons/award-light.png" class="hover-icon" alt="">
+        </div>
+        <h3>Award winning</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur ng elit, sed do eiusmod tempor incididunt ut re magna aliqu enim ad minim</p>
+        <span class="rating">85%</span>
+    </div>
+    <div class="rating-item bg-three">
+        <div class="icon">
+            <img src="~/assets/img/icons/support.png" class="default-icon" alt="">
+            <img src="~/assets/img/icons/support-light.png" class="hover-icon" alt="">
+        </div>
+        <h3>24 / 7 Support</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur ng elit, sed do eiusmod tempor incididunt ut re magna aliqu enim ad minim</p>
+        <span class="rating">97%</span>
+    </div>
+    <div class="rating-item bg-four">
+        <div class="icon">
+            <img src="~/assets/img/icons/consultation.png" class="default-icon" alt="">
+            <img src="~/assets/img/icons/consultation-light.png" class="hover-icon" alt="">
+        </div>
+        <h3>Free consultation</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur ng elit, sed do eiusmod tempor incididunt ut re magna aliqu enim ad minim</p>
+        <span class="rating">88%</span>
+    </div>
+    <div class="rating-item bg-five">
+        <div class="icon">
+            <img src="~/assets/img/icons/delivery.png" class="default-icon" alt="">
+            <img src="~/assets/img/icons/delivery-light.png" class="hover-icon" alt="">
+        </div>
+        <h3>Quick delivery</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur ng elit, sed do eiusmod tempor incididunt ut re magna aliqu enim ad minim</p>
+        <span class="rating">99%</span>
+    </div>
+</section>
+<!-- Rating Section End -->
+<!-- About Section Start -->
+<section id="about-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 order-2 order-md-1">
+                <div class="about-section-left">
+                    <ul class="pgwSlider">
+                        <li><img src="~/assets/img/about-section/1.jpg" alt=""></li>
+                        <li><img src="~/assets/img/about-section/2.jpg" alt=""></li>
+                        <li><img src="~/assets/img/about-section/3.jpg" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 order-1 order-md-2">
+                <div class="about-section-right">
+                    <small class="small-primary">About <span>architectural</span></small>
+                    <h2>We are ready to create various architectural designs</h2>
+                    <p class="lead">We believe the designer will be able to design a good for learnin suides lead through</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod or incididunt ut labore et dolore magna aliqua. Ut enim ad minim eniamnostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo nsequat. Duis ute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat llas pariatur excepteur sint occaecat</p>
+                    <button class="btn button-primary">MORE ABOUT US</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About Section End -->
+<!-- Featured Section Start -->
+<section id="featured-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 wow zoomIn">
+                <div class="featured-item">
+                    <img src="~/assets/img/icons/design.png" alt="">
+                    <h3>Our mission</h3>
+                    <p>Lorem ipsum dolor sit met,ecteturs adipisicing elit, sed do eiusmod por incididunt ut labore</p>
+                </div>
+            </div>
+            <div class="col-md-4 wow zoomIn">
+                <div class="featured-item">
+                    <img src="~/assets/img/icons/vision.png" alt="">
+                    <h3>Our vision</h3>
+                    <p>Lorem ipsum dolor sit met,ecteturs adipisicing elit, sed do eiusmod por incididunt ut labore</p>
+                </div>
+            </div>
+            <div class="col-md-4 wow zoomIn">
+                <div class="featured-item">
+                    <img src="~/assets/img/icons/support.png" alt="">
+                    <h3>Our core values</h3>
+                    <p>Lorem ipsum dolor sit met,ecteturs adipisicing elit, sed do eiusmod por incididunt ut labore</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Featured Section End -->
+<!-- Portfolio Section Start -->
+<section id="portfolio-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <small class="small-primary">Work <span>project</span></small>
+                <h2>Latest project</h2>
+            </div>
+            <div class="col-md-7 position-relative">
+                <div class="portfolio-item-controls">
+                    <button class="active" data-filter="*">All <span>show</span></button>
+                    <button data-filter=".architecture">Architecture</button>
+                    <button data-filter=".interior">Interior</button>
+                    <button data-filter=".commercial">Commercial</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-item-list">
+        <div class="portfolio-item-sizer"></div>
+        <div class="portfolio-item has-gutter portfolio-item--width2 architecture">
+            <div class="inner">
+                <img src="~/assets/img/portfolio-one/1.jpg" alt="">
+                <div class="overlay">
+                    <a href="~/assets/img/portfolio-one/1.jpg" data-lightbox="portfolio-item" data-title="Architecture Project 1"><img src="~/assets/img/icons/plus.png" alt=""></a>
+                    <div class="title">
+                        <small class="small-secondary">Architecture</small>
+                        <h3>Conference Center</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-item has-gutter interior">
+            <div class="inner">
+                <img src="~/assets/img/portfolio-one/2.jpg" alt="">
+                <div class="overlay">
+                    <a href="~/assets/img/portfolio-one/2.jpg" data-lightbox="portfolio-item" data-title="Interior Project 1"><img src="~/assets/img/icons/plus.png" alt=""></a>
+                    <div class="title">
+                        <small class="small-secondary">Interior</small>
+                        <h3>Conference Center</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-item has-gutter commercial">
+            <div class="inner">
+                <img src="~/assets/img/portfolio-one/3.jpg" alt="">
+                <div class="overlay">
+                    <a href="~/assets/img/portfolio-one/3.jpg" data-lightbox="portfolio-item" data-title="Commercial Project 1"><img src="~/assets/img/icons/plus.png" alt=""></a>
+                    <div class="title">
+                        <small class="small-secondary">Commercial</small>
+                        <h3>Conference Center</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-item has-gutter interior">
+            <div class="inner">
+                <img src="~/assets/img/portfolio-one/4.jpg" alt="">
+                <div class="overlay">
+                    <a href="~/assets/img/portfolio-one/4.jpg" data-lightbox="portfolio-item" data-title="Interior Project 2"><img src="~/assets/img/icons/plus.png" alt=""></a>
+                    <div class="title">
+                        <small class="small-secondary">Interior</small>
+                        <h3>Conference Center</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-item has-gutter commercial">
+            <div class="inner">
+                <img src="~/assets/img/portfolio-one/5.jpg" alt="">
+                <div class="overlay">
+                    <a href="~/assets/img/portfolio-one/5.jpg" data-lightbox="portfolio-item" data-title="Commercial Project 2"><img src="~/assets/img/icons/plus.png" alt=""></a>
+                    <div class="title">
+                        <small class="small-secondary">Commercial</small>
+                        <h3>Conference Center</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-item has-gutter portfolio-item--width2 architecture">
+            <div class="inner">
+                <img src="~/assets/img/portfolio-one/6.jpg" alt="">
+                <div class="overlay">
+                    <a href="~/assets/img/portfolio-one/6.jpg" data-lightbox="portfolio-item" data-title="Architecture Project 2"><img src="~/assets/img/icons/plus.png" alt=""></a>
+                    <div class="title">
+                        <small class="small-secondary">Architecture</small>
+                        <h3>Conference Center</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Portfolio Section End -->
+<!-- Service Section Start -->
+<section id="service-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="section-header">
+                    <small class="small-primary">Work <span>sevice</span></small>
+                    <h2>Our great provied</h2>
+                    <p>Our have the best people with whom we can overcome all obstacles in our way, with whom we confidently look to the future</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <div class="service-item">
+                    <div class="icon">
+                        <img src="~/assets/img/icons/delivery.png" alt="">
+                    </div>
+                    <h3>Interior design</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur ci sed do eiusmod tempor incididunt ut ore et dolore magna aliqua.</p>
+                    <a href="#">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="service-item">
+                    <div class="icon">
+                        <img src="~/assets/img/icons/design.png" alt="">
+                    </div>
+                    <h3>Architecture design</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur ci sed do eiusmod tempor incididunt ut ore et dolore magna aliqua.</p>
+                    <a href="#">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="service-item">
+                    <div class="icon">
+                        <img src="~/assets/img/icons/fectory.png" alt="">
+                    </div>
+                    <h3>Residential design</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur ci sed do eiusmod tempor incididunt ut ore et dolore magna aliqua.</p>
+                    <a href="#">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="service-item">
+                    <div class="icon">
+                        <img src="~/assets/img/icons/commercial.png" alt="">
+                    </div>
+                    <h3>Commercial design</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur ci sed do eiusmod tempor incididunt ut ore et dolore magna aliqua.</p>
+                    <a href="#">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="service-item">
+                    <div class="icon">
+                        <img src="~/assets/img/icons/kitchen.png" alt="">
+                    </div>
+                    <h3>Kitchen design</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur ci sed do eiusmod tempor incididunt ut ore et dolore magna aliqua.</p>
+                    <a href="#">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="service-item">
+                    <div class="icon">
+                        <img src="~/assets/img/icons/landscape.png" alt="">
+                    </div>
+                    <h3>Landscape design</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur ci sed do eiusmod tempor incididunt ut ore et dolore magna aliqua.</p>
+                    <a href="#">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Service Section End -->
+<!-- Image Gallery Section Start -->
+<section id="image-gallery-section">
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="residential" role="tabpanel" aria-labelledby="residential"></div>
+        <div class="tab-pane fade" id="architecture" role="tabpanel" aria-labelledby="architecture"></div>
+        <div class="tab-pane fade" id="interior" role="tabpanel" aria-labelledby="interior"></div>
+        <div class="tab-pane fade" id="commercial" role="tabpanel" aria-labelledby="commercial"></div>
+        <div class="tab-pane fade" id="kitchen" role="tabpanel" aria-labelledby="kitchen"></div>
+
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" data-bs-toggle="tab" href="#residential" role="tab" aria-controls="residential" aria-selected="true">Residential design</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#architecture" role="tab" aria-controls="architecture" aria-selected="false">Architecture design</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#interior" role="tab" aria-controls="interior" aria-selected="false">Interior design</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#commercial" role="tab" aria-controls="commercial" aria-selected="false">Commercial design</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#kitchen" role="tab" aria-controls="kitchen" aria-selected="false">Kitchen design</a>
+            </li>
+        </ul>
+    </div>
+</section>
+<!-- Image Gallery Section End -->
+<!-- Awards Section Start -->
+<section id="awards-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-xl-3">
+                <small class="small-primary">Company <span>awards</span></small>
+                <h2>2005 - 2019</h2>
+                <p>Lorem ipsum dolor sit amet, nsectetur adipisicing elit, sed do eiusmod empor incididunt ut labore et dolore maliqua. Ut enim ad minim veniam, quisnostrud exercitation ullamco laboris nisi ut uip ex ea commodo sequat. duis aute rure dolor  enim ad minim</p>
+                <div class="mb-5 d-block d-md-none"></div>
+            </div>
+            <div class="col-md-4 offset-xl-1">
+                <div class="awards-item">
+                    <small class="small-secondary">2005</small>
+                    <h3>kitchen made of marble</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur ipisicing elit, sed do eiusmod tempor</p>
+                </div>
+                <div class="awards-item">
+                    <small class="small-secondary">2007</small>
+                    <h3>Road construction</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur ipisicing elit, sed do eiusmod tempor</p>
+                </div>
+                <div class="awards-item">
+                    <small class="small-secondary">2009</small>
+                    <h3>Diamond ready design</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur ipisicing elit, sed do eiusmod tempor</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="awards-item">
+                    <small class="small-secondary">2010</small>
+                    <h3>The gold-plated mosque</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur ipisicing elit, sed do eiusmod tempor</p>
+                </div>
+                <div class="awards-item">
+                    <small class="small-secondary">2015</small>
+                    <h3>Factory created award</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur ipisicing elit, sed do eiusmod tempor</p>
+                </div>
+                <div class="awards-item">
+                    <small class="small-secondary">2018</small>
+                    <h3>Eidgah field is ready</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur ipisicing elit, sed do eiusmod tempor</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Awards Section End -->
+<!-- CTA Section Start -->
+<section id="cta-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h3>We’ are hirring ipsum dolor sit amet conse ctetur.</h3>
+                <p>Eorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+            </div>
+            <div class="col-md-4">
+                <div class="cta-right">
+                    <a href="#" class="btn button-primary">Contact now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- CTA Section End -->
+<!-- Team Section Start -->
+<section id="team-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="section-header">
+                    <small class="small-primary">Work <span>team</span></small>
+                    <h2>Meet our membar</h2>
+                    <p>Our have the best people with whom we can overcome all obstacles in our way, with whom we confidently look to the future</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 col-md-3 wow fadeInUp">
+                <div class="team-item">
+                    <div class="image-box">
+                        <img src="~/assets/img/team/1.jpg" alt="">
+                        <div class="social-icon-box">
+                            <ul class="social-icon">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h4><a href="single-team.html">Jone anderson</a></h4>
+                    <small class="small-secondary">CEO - Funder</small>
+                    <p>Lorem ipsum dolor sit amet, tetur adipisicing elit, sed</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 wow fadeInUp">
+                <div class="team-item">
+                    <div class="image-box">
+                        <img src="~/assets/img/team/2.jpg" alt="">
+                        <div class="social-icon-box">
+                            <ul class="social-icon">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h4><a href="single-team.html">Chloe gomez</a></h4>
+                    <small class="small-secondary">Designer</small>
+                    <p>Lorem ipsum dolor sit amet, tetur adipisicing elit, sed</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 wow fadeInUp">
+                <div class="team-item">
+                    <div class="image-box">
+                        <img src="~/assets/img/team/3.jpg" alt="">
+                        <div class="social-icon-box">
+                            <ul class="social-icon">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h4><a href="single-team.html">Stiven smith</a></h4>
+                    <small class="small-secondary">Engineer</small>
+                    <p>Lorem ipsum dolor sit amet, tetur adipisicing elit, sed</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 wow fadeInUp">
+                <div class="team-item">
+                    <div class="image-box">
+                        <img src="~/assets/img/team/4.jpg" alt="">
+                        <div class="social-icon-box">
+                            <ul class="social-icon">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h4><a href="single-team.html">Nicolas poran</a></h4>
+                    <small class="small-secondary">Architect</small>
+                    <p>Lorem ipsum dolor sit amet, tetur adipisicing elit, sed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Team Section End -->
+<!-- Testimonial Section Start -->
+<section id="testimonial-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="owl-carousel owl-theme testimonial-carousel">
+                    <div class="testimonial-carousel-item">
+                        <div class="testimonial-carousel-item-inner">
+                            <div class="image-box">
+                                <img src="~/assets/img/user/1.jpg" alt="">
+                            </div>
+                            <h4>Diana austin - <span>Web Designer</span></h4>
+                            <ul class="rating-stars">
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do od tempor incididunt ut labore et dolore magna aliqua. ut enim ad inim eniam, quis nostrud exercitation ullamco</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-carousel-item">
+                        <div class="testimonial-carousel-item-inner">
+                            <div class="image-box">
+                                <img src="~/assets/img/user/2.jpg" alt="">
+                            </div>
+                            <h4>Stiven smith - <span>Engineer</span></h4>
+                            <ul class="rating-stars">
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do od tempor incididunt ut labore et dolore magna aliqua. ut enim ad inim eniam, quis nostrud exercitation ullamco</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-carousel-item">
+                        <div class="testimonial-carousel-item-inner">
+                            <div class="image-box">
+                                <img src="~/assets/img/user/1.jpg" alt="">
+                            </div>
+                            <h4>Diana austin - <span>Web Designer</span></h4>
+                            <ul class="rating-stars">
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do od tempor incididunt ut labore et dolore magna aliqua. ut enim ad inim eniam, quis nostrud exercitation ullamco</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-carousel-item">
+                        <div class="testimonial-carousel-item-inner">
+                            <div class="image-box">
+                                <img src="~/assets/img/user/2.jpg" alt="">
+                            </div>
+                            <h4>Stiven smith - <span>Engineer</span></h4>
+                            <ul class="rating-stars">
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do od tempor incididunt ut labore et dolore magna aliqua. ut enim ad inim eniam, quis nostrud exercitation ullamco</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-carousel-item">
+                        <div class="testimonial-carousel-item-inner">
+                            <div class="image-box">
+                                <img src="~/assets/img/user/1.jpg" alt="">
+                            </div>
+                            <h4>Diana austin - <span>Web Designer</span></h4>
+                            <ul class="rating-stars">
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do od tempor incididunt ut labore et dolore magna aliqua. ut enim ad inim eniam, quis nostrud exercitation ullamco</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-carousel-item">
+                        <div class="testimonial-carousel-item-inner">
+                            <div class="image-box">
+                                <img src="~/assets/img/user/2.jpg" alt="">
+                            </div>
+                            <h4>Stiven smith - <span>Engineer</span></h4>
+                            <ul class="rating-stars">
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do od tempor incididunt ut labore et dolore magna aliqua. ut enim ad inim eniam, quis nostrud exercitation ullamco</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Testimonial Section End -->
+<!-- Blog Section Start -->
+<section id="blog-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="section-header">
+                    <small class="small-primary">Latest <span>Update</span></small>
+                    <h2>Our latest blog</h2>
+                    <p>Our have the best people with whom we can overcome all obstacles in our way, with whom we confidently look to the future</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="single-post">
+                    <div class="image-box">
+                        <div class="image-box-inner">
+                            <img src="~/assets/img/blog/1.jpg" alt="">
+                        </div>
+                        <p class="date">25, August 2018</p>
+                    </div>
+                    <h3><a href="#">Architecture  are alreadreque stin marc sobs</a></h3>
+                    <ul class="result-list">
+                        <li><a href="#"><i class="far fa-heart"></i> Like</a></li>
+                        <li><a href="#"><i class="far fa-comment"></i> Comments</a></li>
+                        <li><a href="#"><i class="far fa-eye"></i> Views</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="single-post">
+                    <div class="image-box">
+                        <div class="image-box-inner">
+                            <img src="~/assets/img/blog/2.jpg" alt="">
+                        </div>
+                        <p class="date">25, August 2018</p>
+                    </div>
+                    <h3><a href="#">Discover Architecture Of Bario sti marc jobs</a></h3>
+                    <ul class="result-list">
+                        <li><a href="#"><i class="far fa-heart"></i> Like</a></li>
+                        <li><a href="#"><i class="far fa-comment"></i> Comments</a></li>
+                        <li><a href="#"><i class="far fa-eye"></i> Views</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="single-post">
+                    <div class="image-box">
+                        <div class="image-box-inner">
+                            <img src="~/assets/img/blog/3.jpg" alt="">
+                        </div>
+                        <p class="date">25, August 2018</p>
+                    </div>
+                    <h3><a href="#">Fashion people are alreadreque sti marc kebs</a></h3>
+                    <ul class="result-list">
+                        <li><a href="#"><i class="far fa-heart"></i> Like</a></li>
+                        <li><a href="#"><i class="far fa-comment"></i> Comments</a></li>
+                        <li><a href="#"><i class="far fa-eye"></i> Views</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Blog Section End -->
+<!-- Social Icons Section Start -->
+<section id="social-icons-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-tumblr"></i></a></li>
+                    <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                    <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Social Icons Section End -->

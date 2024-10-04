@@ -4,46 +4,109 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - AsadAfzal</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/AsadAfzal.styles.css" asp-append-version="true" />
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="robots" content="" />
+    <meta name="description" content="" />
+    <!-- Favicon-->
+    <link rel="icon" href="~/assets/img/favicon.ico" type="image/gif">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/assets/vendor/bootstrap/css/bootstrap-5.1.3.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="~/assets/vendor/fontawesome/fontawesome-5.6.3.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Slicknav CSS -->
+    <link rel="stylesheet" href="~/assets/vendor/slicknav/css/slicknav-1.0.10.min.css">
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="~/assets/vendor/lightbox/css/lightbox-2.10.0.min.css">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="~/assets/vendor/owl-carousel/css/owl.carousel-2.3.4.min.css">
+    <!-- Owl Carousel Theme CSS -->
+    <link rel="stylesheet" href="~/assets/vendor/owl-carousel/css/owl.theme.default-2.3.4.min.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="~/assets/vendor/animate/animate-3.7.0.css">
+    <!-- PGW Slider CSS -->
+    <link rel="stylesheet" href="~/assets/vendor/pgw-slider/css/pgwslider-2.3.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="~/assets/css/responsive.css">
+
+    <!-- jQuery -->
+    <script src="~/assets/vendor/jquery/jquery-2.2.4.min.js"></script>
+    <style>
+        .float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 85px;
+            right: 20px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+        }
+
+        .my-float {
+            margin-top: 16px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AsadAfzal</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
+    <partial name="_Header" />
+    <partial name="_HeroSlider" />
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
+    <partial name="_Footer" />
+    <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
+        <i class="fab fa-whatsapp my-float"></i>
+    </a>
+    <!-- Scroll To Top Start -->
+    <div id="scroll-to-top" >
+        <i class="fas fa-angle-up"></i>
     </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - AsadAfzal - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <!-- Scroll To Top End -->
+    <!-- Loading Spinner Start -->
+    <div class="spinner-wrpr">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    </div>
+    <!-- Loading Spinner End -->
+    <!-- Bootstrap JS -->
+    <script src="~/assets/vendor/bootstrap/js/bootstrap.bundle-5.1.3.js"></script>
+    <!-- Slicknav JS -->
+    <script src="~/assets/vendor/slicknav/js/jquery.slicknav-1.0.10.min.js"></script>
+    <!-- Lightbox JS -->
+    <script src="~/assets/vendor/lightbox/js/lightbox-2.10.0.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="~/assets/vendor/owl-carousel/js/owl.carousel-2.3.4.min.js"></script>
+    <!-- Waypoints JS -->
+    <script src="~/assets/vendor/waypoints/jquery.waypoints-2.0.3.min.js"></script>
+    <!-- Counter Up JS -->
+    <script src="~/assets/vendor/counterup/jquery.counterup-1.0.min.js"></script>
+    <!-- WOW JS -->
+    <script src="~/assets/vendor/wow/wow-1.3.0.min.js"></script>
+    <!-- PGW Slider JS -->
+    <script src="~/assets/vendor/pgw-slider/js/pgwslider-2.3.js"></script>
+    <!-- Isotope JS -->
+    <script src="~/assets/vendor/isotope/isotope.pkgd-3.0.6.min.js"></script>
+    <!-- Countdown JS -->
+    <script src="~/assets/vendor/countdown/countdown.jquery.js"></script>
+    <!-- Paroller JS -->
+    <script src="~/assets/vendor/paroller/jquery.paroller-1.4.6.min.js"></script>
+    <!-- jQuery Validation Js -->
+    <script src="~/assets/vendor/jquery-validation/jquery.validate-1.16.9.min.js"></script>
+    <!-- Main JS -->
+    <script src="~/assets/js/main.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
