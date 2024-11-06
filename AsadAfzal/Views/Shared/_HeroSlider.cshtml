@@ -1,8 +1,37 @@
 ﻿<!-- Hero Section One Start -->
+<style>
+        .hero-slider-item {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .video-background {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: 1;
+        transform: translate(-50%, -50%);
+        object-fit: cover; /* Ensures the video covers the entire area */
+    }
+
+    .hero-contents {
+        position: relative;
+        z-index: 2; /* Ensures content is above the video */
+    }
+
+</style>
 <section id="hero-section-one">
     <!-- Hero Slider Start -->
     <div class="owl-carousel hero-slider">
         <div class="hero-slider-item bg-one">
+            <video autoplay muted loop class="video-background">
+                <source src="~/assets/Video/video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             <div class="d-table">
                 <div class="d-table-cell">
                     <div class="container">
@@ -11,7 +40,7 @@
                                 <div class="hero-contents">
                                     <span class="hero-counter"></span>
                                     <h1>Experience<br>Interior Design</h1>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ncididunt ut labore dolore</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
                                     <button class="btn button-primary">See Project</button>
                                     <button class="btn button-secondary-white">Get Contact</button>
                                 </div>
