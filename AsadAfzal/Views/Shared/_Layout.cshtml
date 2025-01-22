@@ -1,125 +1,92 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - AsadAfzal</title>
-    <!-- Meta -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="keywords" content="" />
-    <meta name="author" content="" />
-    <meta name="robots" content="" />
-    <meta name="description" content="" />
-    <!-- Favicon-->
-    <link rel="icon" href="~/assets/img/favicon.ico" type="image/gif">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="~/assets/vendor/bootstrap/css/bootstrap-5.1.3.min.css">
-    <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="~/assets/vendor/fontawesome/fontawesome-5.6.3.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <!-- Slicknav CSS -->
-    <link rel="stylesheet" href="~/assets/vendor/slicknav/css/slicknav-1.0.10.min.css">
-    <!-- Lightbox CSS -->
-    <link rel="stylesheet" href="~/assets/vendor/lightbox/css/lightbox-2.10.0.min.css">
-    <!-- Owl Carousel CSS -->
-    <link rel="stylesheet" href="~/assets/vendor/owl-carousel/css/owl.carousel-2.3.4.min.css">
-    <!-- Owl Carousel Theme CSS -->
-    <link rel="stylesheet" href="~/assets/vendor/owl-carousel/css/owl.theme.default-2.3.4.min.css">
-    <!-- Animate CSS -->
-    <link rel="stylesheet" href="~/assets/vendor/animate/animate-3.7.0.css">
-    <!-- PGW Slider CSS -->
-    <link rel="stylesheet" href="~/assets/vendor/pgw-slider/css/pgwslider-2.3.css">
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="~/assets/css/style.css">
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="~/assets/css/responsive.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Go.arch  - Architecture HTML Template</title>
 
-    <!-- jQuery -->
-    <script src="~/assets/vendor/jquery/jquery-2.2.4.min.js"></script>
-    <style>
-        .float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 85px;
-            right: 20px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 3px #999;
-            z-index: 100;
-        }
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/assets/favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/apple-touch-icon-114x114.png">
 
-        .my-float {
-            margin-top: 16px;
-        }
-
-        p {
-            color: #cfcdcd !important
-        }
-    </style>
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet" media="screen">
 </head>
 <body>
-    <partial name="_Header" />
-    @if (ViewBag.ShowHeader == true)
-    {
-        <partial name="_HeroSlider" />
-    }
+    <!-- Loader -->
 
-    <main role="main" class="pb-3" style="background: #262525 !important">
-        @RenderBody()
-    </main>
-    <partial name="_Footer" />
-    <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
-        <i class="fab fa-whatsapp my-float"></i>
-    </a>
-    <!-- Scroll To Top Start -->
-    <div id="scroll-to-top">
-        <i class="fas fa-angle-up"></i>
-    </div>
-    <!-- Scroll To Top End -->
-    <!-- Loading Spinner Start -->
-    @* <div class="spinner-wrpr">
-        <div class="spinner">
-            <div class="double-bounce1"></div>
-            <div class="double-bounce2"></div>
+    <div class="loader">
+        <div class="page-lines">
+            <div class="container">
+                <div class="col-line col-xs-4">
+                    <div class="line"></div>
+                </div>
+                <div class="col-line col-xs-4">
+                    <div class="line"></div>
+                </div>
+                <div class="col-line col-xs-4">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
         </div>
-    </div> *@
-    <!-- Loading Spinner End -->
-    <!-- Bootstrap JS -->
-    <script src="~/assets/vendor/bootstrap/js/bootstrap.bundle-5.1.3.js"></script>
-    <!-- Slicknav JS -->
-    <script src="~/assets/vendor/slicknav/js/jquery.slicknav-1.0.10.min.js"></script>
-    <!-- Lightbox JS -->
-    <script src="~/assets/vendor/lightbox/js/lightbox-2.10.0.min.js"></script>
-    <!-- Owl Carousel JS -->
-    <script src="~/assets/vendor/owl-carousel/js/owl.carousel-2.3.4.min.js"></script>
-    <!-- Waypoints JS -->
-    <script src="~/assets/vendor/waypoints/jquery.waypoints-2.0.3.min.js"></script>
-    <!-- Counter Up JS -->
-    <script src="~/assets/vendor/counterup/jquery.counterup-1.0.min.js"></script>
-    <!-- WOW JS -->
-    <script src="~/assets/vendor/wow/wow-1.3.0.min.js"></script>
-    <!-- PGW Slider JS -->
-    <script src="~/assets/vendor/pgw-slider/js/pgwslider-2.3.js"></script>
-    <!-- Isotope JS -->
-    <script src="~/assets/vendor/isotope/isotope.pkgd-3.0.6.min.js"></script>
-    <!-- Countdown JS -->
-    <script src="~/assets/vendor/countdown/countdown.jquery.js"></script>
-    <!-- Paroller JS -->
-    <script src="~/assets/vendor/paroller/jquery.paroller-1.4.6.min.js"></script>
-    <!-- jQuery Validation Js -->
-    <script src="~/assets/vendor/jquery-validation/jquery.validate-1.16.9.min.js"></script>
+        <div class="loader-brand">
+            <div class="sk-folding-cube">
+                <div class="sk-cube1 sk-cube"></div>
+                <div class="sk-cube2 sk-cube"></div>
+                <div class="sk-cube4 sk-cube"></div>
+                <div class="sk-cube3 sk-cube"></div>
+            </div>
+        </div>
+    </div>
 
-    <!-- Google Map API -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=&callback=myMap"></script>
-    <!-- Google Map JS -->
-    <script src="~/assets/js/map.js"></script>
-    <!-- Main JS -->
-    <script src="~/assets/js/main.js"></script>
+
+    <partial name="_Header" />
+
+    <div class="layout">
+        @if (ViewBag.ShowHeader == true)
+        {
+            <partial name="_HeroSlider" />
+        }
+        <div class="content">
+            @RenderBody()
+            <partial name="_Footer" />
+
+        </div>
+    </div>
+    @*   <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
+    <i class="fab fa-whatsapp my-float"></i>
+    </a> *@
+    <!-- SCRIPTS -->
+
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/smoothscroll.js"></script>
+    <script src="/assets/js/jquery.validate.min.js"></script>
+    <script src="/assets/js/wow.min.js"></script>
+    <script src="/assets/js/jquery.stellar.min.js"></script>
+    <script src="/assets/js/jquery.magnific-popup.js"></script>
+    <script src="/assets/js/owl.carousel.min.js"></script>
+
+    <!-- SLIDER REVOLUTION -->
+    <script src="/assets/js/rev-slider/jquery.themepunch.tools.min.js"></script>
+    <script src="/assets/js/rev-slider/jquery.themepunch.revolution.min.js"></script>
+
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS   -->
+    <script src="/assets/js/rev-slider/revolution.extension.actions.min.js"></script>
+    <script src="/assets/js/rev-slider/revolution.extension.carousel.min.js"></script>
+    <script src="/assets/js/rev-slider/revolution.extension.kenburn.min.js"></script>
+    <script src="/assets/js/rev-slider/revolution.extension.layeranimation.min.js"></script>
+    <script src="/assets/js/rev-slider/revolution.extension.migration.min.js"></script>
+    <script src="/assets/js/rev-slider/revolution.extension.navigation.min.js"></script>
+    <script src="/assets/js/rev-slider/revolution.extension.parallax.min.js"></script>
+    <script src="/assets/js/rev-slider/revolution.extension.slideanims.min.js"></script>
+    <script src="/assets/js/rev-slider/revolution.extension.video.min.js"></script>
+    <script src="/assets/js/interface.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
