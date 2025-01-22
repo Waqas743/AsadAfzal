@@ -1,31 +1,61 @@
 ﻿   <!-- Header -->
-
-<header id="top" class="header-home">
-    <div class="brand-panel">
-        <a href="@Url.Action("Index","Home")" class="brand js-target-scroll">
-            go<span class="text-primary">.</span>arch
-        </a>
-        <div class="brand-name">Go.arch</div>
-        <div class="slide-number">
-            <span class="current-number text-primary">0<span class="count">1</span></span>
-            <sup><span class="delimiter">/</span> 0<span class="total-count"></span></sup>
+   @inject IHttpContextAccessor HttpContextAccessor
+@{
+    var routeValues = HttpContextAccessor.HttpContext?.GetRouteData()?.Values;
+    var controller = routeValues?["controller"]?.ToString();
+    var action = routeValues?["action"]?.ToString();
+    var classes = (controller == "Home" && action == "Index") ? "header-home" : "header-inner";
+}
+<header id="top" class="@classes">
+    @if (controller == "Home" && action == "Index")
+    {
+        <div class="brand-panel">
+            <a href="@Url.Action("Index","Home")" class="brand js-target-scroll">
+                go<span class="text-primary">.</span>arch
+            </a>
+            <div class="brand-name">Go.arch</div>
+            <div class="slide-number">
+                <span class="current-number text-primary">0<span class="count">1</span></span>
+                <sup><span class="delimiter">/</span> 0<span class="total-count"></span></sup>
+            </div>
         </div>
-    </div>
-    <div class="header-phone">+7 (212) 674-25-10</div>
-    <div class="vertical-panel"></div>
-    <div class="vertical-panel-content">
-        <div class="vertical-panel-info">
-            <div class="vertical-panel-title">Architecture buro</div>
-            <div class="line"></div>
+        <div class="header-phone">+7 (212) 674-25-10</div>
+        <div class="vertical-panel"></div>
+        <div class="vertical-panel-content">
+            <div class="vertical-panel-info">
+                <div class="vertical-panel-title">Architecture buro</div>
+                <div class="line"></div>
+            </div>
+            <ul class="social-list">
+                <li><a href="#" class="fa fa-instagram"></a></li>
+                <li><a href="#" class="fa fa-twitter"></a></li>
+                <li><a href="#" class="fa fa-behance"></a></li>
+                <li><a href="#" class="fa fa-facebook"></a></li>
+            </ul>
         </div>
-        <ul class="social-list">
-            <li><a href="#" class="fa fa-instagram"></a></li>
-            <li><a href="#" class="fa fa-twitter"></a></li>
-            <li><a href="#" class="fa fa-behance"></a></li>
-            <li><a href="#" class="fa fa-facebook"></a></li>
-        </ul>
-    </div>
+    }
+    else
+    {
+        <div class="brand-panel">
+            <a href="@Url.Action("Index","Home")" class="brand">
+                go<span class="text-primary">.</span>arch
+            </a>
+            <div class="brand-name">Go.arch</div>
+        </div>
+        <div class="header-phone">+7 (212) 674-25-10</div>
+        <div class="vertical-panel-content">
+            <div class="vertical-panel-info">
+                <div class="line"></div>
+            </div>
+            <ul class="social-list">
+                <li><a href="#" class="fa fa-instagram"></a></li>
+                <li><a href="#" class="fa fa-twitter"></a></li>
+                <li><a href="#" class="fa fa-behance"></a></li>
+                <li><a href="#" class="fa fa-facebook"></a></li>
+            </ul>
+        </div>
 
+    }
     <!-- Navigation Desctop -->
 
     <nav class="navbar-desctop visible-md visible-lg">
@@ -84,7 +114,7 @@
         <div class="collapse navbar-collapse" id="navbar-mobile">
             <ul class="navbar-nav-mobile">
                 <li class="active">
-                    <a href="@Url.Action("Index","Home")">Home <i class="fa fa-angle-down"></i></a>
+                    <a href="@Url.Action("Index","Home")">Home</a>
                 </li>
                 <li>
                     <a href="@Url.Action("AboutUs","Home")">About us</a>
