@@ -22,6 +22,7 @@ namespace AsadAfzal.Controllers
         public IActionResult AboutUs()
         {
             ViewBag.ShowHeader = false;
+            ViewBag.AboutUs = true;
             return View();
         }
 

@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@inject IHttpContextAccessor HttpContextAccessor
+@{
+    var routeValues = HttpContextAccessor.HttpContext?.GetRouteData()?.Values;
+    var controller = routeValues?["controller"]?.ToString();
+    var action = routeValues?["action"]?.ToString();
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -7,7 +13,7 @@
 
     <!-- Favicons -->
     <link rel="shortcut icon" href="/assets/favicon.png">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/assets/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="/assets/apple-touch-icon-114x114.png">
 
@@ -52,6 +58,34 @@
         {
             <partial name="_HeroSlider" />
         }
+        @if (controller == "Home" && action == "AboutUs")
+        {
+             <main class="main main-inner bg-about" data-stellar-background-ratio="0.6">
+            <div class="container">
+                <header class="main-header">
+                    <h1>About Arch</h1>
+                </header>
+            </div>
+
+            <!-- Lines -->
+
+            <div class="page-lines">
+                <div class="container">
+                    <div class="col-line col-xs-4">
+                        <div class="line"></div>
+                    </div>
+                    <div class="col-line col-xs-4">
+                        <div class="line"></div>
+                    </div>
+                    <div class="col-line col-xs-4">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        }
+      
         <div class="content">
             @RenderBody()
             <partial name="_Footer" />
