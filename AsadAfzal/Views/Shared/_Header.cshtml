@@ -6,14 +6,25 @@
     var action = routeValues?["action"]?.ToString();
     var classes = (controller == "Home" && action == "Index") ? "header-home" : "header-inner";
 }
+<style>
+    .logo_img {
+        width: 120px;
+    }
+
+    @@media (max-width: 468px) {
+        .logo_img {
+            width: 80px !important;
+        }
+    }
+</style>
 <header id="top" class="@classes">
     @if (controller == "Home" && action == "Index")
     {
         <div class="brand-panel">
             <a href="@Url.Action("Index","Home")" class="brand js-target-scroll">
-                go<span class="text-primary">.</span>arch
+                <img src="~/assets/img/logo/logo.png" alt="Alternate Text" class="logo_img" />
             </a>
-            <div class="brand-name">Go.arch</div>
+            <div class="brand-name">ASAD AFZAL</div>
             <div class="slide-number">
                 <span class="current-number text-primary">0<span class="count">1</span></span>
                 <sup><span class="delimiter">/</span> 0<span class="total-count"></span></sup>
@@ -38,9 +49,9 @@
     {
         <div class="brand-panel">
             <a href="@Url.Action("Index","Home")" class="brand">
-                go<span class="text-primary">.</span>arch
+                <img src="~/assets/img/logo/logo.png" alt="Alternate Text" class="logo_img" />
             </a>
-            <div class="brand-name">Go.arch</div>
+            <div class="brand-name">    <img src="~/assets/img/logo/logo.png" alt="Alternate Text" class="logo_img" /></div>
         </div>
         <div class="header-phone">+7 (212) 674-25-10</div>
         <div class="vertical-panel-content">
@@ -60,8 +71,8 @@
 
     <nav class="navbar-desctop visible-md visible-lg">
         <div class="container">
-            <a href="#top" class="brand js-target-scroll">
-                go<span class="text-primary">.</span>arch
+            <a href="@Url.Action("Index","Home")" class="brand js-target-scroll">
+                <img src="~/assets/img/logo/logo.png" alt="Alternate Text" class="logo_img" />
             </a>
             <ul class="navbar-desctop-menu">
                 <li class="active">
@@ -71,25 +82,25 @@
                     <a href="@Url.Action("AboutUs","Home")">About us</a>
                 </li>
                 <li>
-                    <a href="projects.html">Projects</a>
+                    <a href="@Url.Action("Projects","Home")">Projects</a>
                     <ul>
-                        <li><a href="projects.html">Projects - List</a></li>
+                        <li><a href="@Url.Action("Projects","Home")">Projects - List</a></li>
                         <li>
                             <a href="project.html">Project - details</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="blog.html">Blog</a>
+                    <a href="@Url.Action("Blogs","Home")">Blog</a>
                     <ul>
-                        <li><a href="blog.html">Blog - List</a></li>
+                        <li><a href="@Url.Action("Blogs","Home")">Blog - List</a></li>
                         <li>
                             <a href="blog-details.html">Blog - Post</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="contacts.html">Contacts</a>
+                    <a href="@Url.Action("ContactUs","Home")">Contacts</a>
                 </li>
             </ul>
         </div>
@@ -98,8 +109,8 @@
     <!-- Navigation Mobile -->
 
     <nav class="navbar-mobile">
-        <a href="#top" class="brand js-target-scroll">
-            go<span class="text-primary">.</span>arch
+        <a href ="@Url.Action("Index", "Home")" class="brand js-target-scroll">
+            <img src="~/assets/img/logo/logo.png" alt="Alternate Text" class="logo_img" />
         </a>
 
         <!-- Navbar Collapse -->
@@ -120,25 +131,25 @@
                     <a href="@Url.Action("AboutUs","Home")">About us</a>
                 </li>
                 <li>
-                    <a href="#">Projects <i class="fa fa-angle-down"></i></a>
+                    <a href="@Url.Action("Projects","Home")">Projects <i class="fa fa-angle-down"></i></a>
                     <ul>
-                        <li><a href="projects.html">Projects - List</a></li>
+                        <li><a href="@Url.Action("Projects","Home")">Projects - List</a></li>
                         <li>
                             <a href="project.html">Project - details</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">Blog <i class="fa fa-angle-down"></i></a>
+                    <a href="@Url.Action("Blogs","Home")" <i class="fa fa-angle-down"></i></a>
                     <ul>
-                        <li><a href="blog.html">Blog - List</a></li>
+                        <li><a href="@Url.Action("Blogs","Home")">Blog - List</a></li>
                         <li>
                             <a href="blog-details.html">Blog - Post</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="contacts.html">Contacts</a>
+                    <a href="@Url.Action("ContactUs","Home")">Contacts</a>
                 </li>
             </ul>
         </div>

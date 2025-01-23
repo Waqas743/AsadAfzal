@@ -196,7 +196,7 @@ function initialize() {
     marker = new google.maps.Marker({
         map: map,
         draggable: true,
-        title: 'Go.arch', //change title here
+        title: 'Asad Afzal Design', //change title here
         animation: google.maps.Animation.DROP,
         position: mapLocation
     });
