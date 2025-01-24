@@ -68,20 +68,19 @@
 
     }
     <!-- Navigation Desctop -->
-
     <nav class="navbar-desctop visible-md visible-lg">
         <div class="container">
             <a href="@Url.Action("Index","Home")" class="brand js-target-scroll">
                 <img src="~/assets/img/logo/logo.png" alt="Alternate Text" class="logo_img" />
             </a>
             <ul class="navbar-desctop-menu">
-                <li class="active">
+                <li class="@(controller == "Home" && action == "Index" ? "active" : "")">
                     <a href="@Url.Action("Index","Home")">Home</a>
                 </li>
-                <li>
+                <li class="@(controller == "Home" && action == "AboutUs" ? "active" : "")">
                     <a href="@Url.Action("AboutUs","Home")">About us</a>
                 </li>
-                <li>
+                <li class="@(controller == "Home" && action == "Projects" ? "active" : "")">
                     <a href="@Url.Action("Projects","Home")">Projects</a>
                     <ul>
                         <li><a href="@Url.Action("Projects","Home")">Projects - List</a></li>
@@ -90,7 +89,7 @@
                         </li>
                     </ul>
                 </li>
-                <li>
+                <li class="@(controller == "Home" && action == "Blogs" ? "active" : "")">
                     <a href="@Url.Action("Blogs","Home")">Blog</a>
                     <ul>
                         <li><a href="@Url.Action("Blogs","Home")">Blog - List</a></li>
@@ -99,13 +98,12 @@
                         </li>
                     </ul>
                 </li>
-                <li>
+                <li class="@(controller == "Home" && action == "ContactUs" ? "active" : "")">
                     <a href="@Url.Action("ContactUs","Home")">Contacts</a>
                 </li>
             </ul>
         </div>
     </nav>
-
     <!-- Navigation Mobile -->
 
     <nav class="navbar-mobile">
@@ -124,14 +122,14 @@
 
         <div class="collapse navbar-collapse" id="navbar-mobile">
             <ul class="navbar-nav-mobile">
-                <li class="active">
+                <li class="@(controller == "Home" && action == "Index" ? "active" : "")">
                     <a href="@Url.Action("Index","Home")">Home</a>
                 </li>
-                <li>
+                <li class="@(controller == "Home" && action == "AboutUs" ? "active" : "")">
                     <a href="@Url.Action("AboutUs","Home")">About us</a>
                 </li>
-                <li>
-                    <a href="@Url.Action("Projects","Home")">Projects <i class="fa fa-angle-down"></i></a>
+                <li class="@(controller == "Home" && action == "Projects" ? "active" : "")">
+                    <a href="#">Projects <i class="fa fa-angle-down"></i></a>
                     <ul>
                         <li><a href="@Url.Action("Projects","Home")">Projects - List</a></li>
                         <li>
@@ -139,8 +137,8 @@
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <a href="@Url.Action("Blogs","Home")" <i class="fa fa-angle-down"></i></a>
+                <li class="@(controller == "Home" && action == "Blogs" ? "active" : "")">
+                    <a href="#">Blog <i class="fa fa-angle-down"></i></a>
                     <ul>
                         <li><a href="@Url.Action("Blogs","Home")">Blog - List</a></li>
                         <li>
@@ -148,7 +146,7 @@
                         </li>
                     </ul>
                 </li>
-                <li>
+                <li class="@(controller == "Home" && action == "ContactUs" ? "active" : "")">
                     <a href="@Url.Action("ContactUs","Home")">Contacts</a>
                 </li>
             </ul>

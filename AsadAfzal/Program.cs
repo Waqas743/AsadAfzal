@@ -15,11 +15,20 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseStaticFiles();
+app.UseStaticFiles(new StaticFileOptions
+{
+    OnPrepareResponse = ctx =>
+    {
+        ctx.Context.Response.Headers.Append("Cache-Control", "public,max-age=600");
+        ctx.Context.Response.Headers.Append("Cache-Control", "public,max-age=31536000");
+
+    }
+});
 
 app.UseRouting();
 
 app.UseAuthorization();
+app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
 
 app.MapControllerRoute(
     name: "default",
