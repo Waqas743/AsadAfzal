@@ -1,8 +1,11 @@
+using AsadAfzal.Helpers;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddControllersWithViews();
+RazorViewHelper.Initialize(builder.Configuration);
 
 var app = builder.Build();
 

@@ -2,7 +2,31 @@
     ViewData["Title"] = "Home Page";
 }
 <!-- About  -->
+<style>
+    .video-container {
+        height: 100%;
+    }
 
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    .section-content-video {
+        width: 100vw; /* Full viewport width */
+        height: 100vh; /* Optional: Full viewport height */
+        overflow: hidden;
+    }
+
+        .section-content-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures video covers the entire section */
+            display: block;
+        }
+
+</style>
 <section id="about" class="about section">
     <div class="container">
         <header class="section-header">
@@ -42,10 +66,33 @@
 </section>
 
 <!-- Projects -->
-
 <section class="projects section">
+    <div class="section-content-video">
+        <video src="/assets/Videos/testVideo4.mp4" loop autoplay muted></video>
+    </div>
+</section>
+<section class="projects section">
+    <div class="container">
+        <h2 class="section-title">Open <span class="text-primary">Houses</span></h2>
+    </div>
     <div class="section-content">
-        <video src="~/assets/Videos/testVideo.mp4" loop autoplay muted></video>
+        <div class="row g-3">
+            <div class="col-md-4 d-flex">
+                <div class="video-container w-100">
+                    <video src="/assets/Videos/testVideo1.mp4" loop autoplay muted></video>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="video-container w-100">
+                    <video src="/assets/Videos/testVideo2.mp4" loop autoplay muted></video>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="video-container w-100">
+                    <video src="/assets/Videos/testVideo3.mp4" loop autoplay muted></video>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <section class="projects section">
