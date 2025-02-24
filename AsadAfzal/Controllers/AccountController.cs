@@ -15,8 +15,21 @@ namespace AsadAfzal.Controllers
             _signInManager = signInManager;
         }
 
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+
         // GET: /Account/Login
-        public IActionResult Login() => View();
+        public IActionResult Login()
+        {
+            if (User.Identity.IsAuthenticated) // Check if user is already logged in
+            {
+                return RedirectToAction("Index", "Account"); // Redirect to Dashboard
+            }
+            return View();
+        }
 
         // POST: /Account/Login
         [HttpPost]
@@ -24,10 +37,10 @@ namespace AsadAfzal.Controllers
         {
             if (!ModelState.IsValid) return View(model);
 
-            var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, false);
+            var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
 
             if (result.Succeeded)
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Account");
 
             ModelState.AddModelError("", "Invalid login attempt.");
             return View(model);
@@ -61,7 +74,7 @@ namespace AsadAfzal.Controllers
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Login", "Account");
         }
     }
 }
