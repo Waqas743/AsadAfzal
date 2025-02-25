@@ -1,0 +1,179 @@
+﻿@{
+    ViewData["Title"] = "New Project";
+    Layout = "/Views/Shared/AccountLayout/_AccountLayout.cshtml";
+}
+
+<link rel="stylesheet" href="/assets/Accounts/assets/vendor/libs/quill/typography.css" />
+<link rel="stylesheet" href="/assets/Accounts/assets/vendor/libs/quill/katex.css" />
+<link rel="stylesheet" href="/assets/Accounts/assets/vendor/libs/quill/editor.css" />
+
+<link rel="stylesheet" href="/assets/Accounts/assets/vendor/libs/dropzone/dropzone.css" />
+<div class="container-xxl flex-grow-1 container-p-y">
+    <div class="app-ecommerce">
+        <!-- Add Project -->
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-6 row-gap-4">
+            <div class="d-flex flex-column justify-content-center">
+                <h4 class="mb-1">Add a new Project</h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- First column-->
+            <div class="col-12 col-lg-12">
+                <!-- Project Information -->
+                <div class="card mb-6">
+                    <div class="card-header">
+                        <h5 class="card-tile mb-0">Project information</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row mb-6">
+                            <div class="col">
+                                <label class="form-label" for="ecommerce-Project-name">Name</label>
+                                <input type="text"
+                                       class="form-control"
+                                       id="projectTite"
+                                       placeholder="Project title"
+                                       name="ProjectTitle"
+                                       aria-label="Project title" />
+                            </div>
+                            <div class="mb-6 col ecommerce-select2-dropdown">
+                                <label class="form-label mb-1" for="status-org">Project Type </label>
+                                <select id="projectType" class="select2 form-select" data-placeholder="Select Type">
+                                    <option value="" disabled selected>Select Type</option>
+                                    <option value="Commercial">Commercial</option>
+                                    <option value="Residential">Residential</option>
+                                    <option value="Both">Both</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <!-- Description -->
+                        <div>
+                            <label class="mb-1">Description (Optional)</label>
+                            <div class="form-control p-0">
+                                <div class="comment-toolbar border-0 border-bottom">
+                                    <div class="d-flex justify-content-start">
+                                        <span class="ql-formats me-0">
+                                            <button class="ql-bold"></button>
+                                            <button class="ql-italic"></button>
+                                            <button class="ql-underline"></button>
+                                            <button class="ql-list" value="ordered"></button>
+                                            <button class="ql-list" value="bullet"></button>
+                                            <button class="ql-link"></button>
+                                            <button class="ql-image"></button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="comment-editor border-0 pb-6 projectDescription" id="ecommerce-category-description"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Project Information -->
+                <!-- Media -->
+                <div class="col-12">
+                    <div class="card mb-6">
+                        <h5 class="card-header">Project Feature Image</h5>
+                        <div class="card-body">
+                            <form action="/upload" class="dropzone needsclick" id="dropzone-basic">
+                                <div class="dz-message needsclick">
+                                    Drop files here or click to upload
+
+                                </div>
+                                <div class="fallback">
+                                    <input name="file" type="file" id="featureImage" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="card">
+                        <h5 class="card-header">Project Gallery Images</h5>
+                        <div class="card-body">
+                            <form action="/upload" class="dropzone needsclick" id="dropzone-multi">
+                                <div class="dz-message needsclick">
+                                    Drop files here or click to upload
+
+                                </div>
+                                <div class="fallback">
+                                    <input name="file" type="file" id="galleryImage" />
+                                </div>
+                            </form>
+                            <div class="mt-3">
+                                <button class="btn btn-primary waves-effect waves-light" data-repeater-create="" onclick="SaveProject()">
+                                    <i class="ti ti-plus ti-xs me-2"></i>
+                                    Save Project
+                                </button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                  
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/assets/Accounts/assets/vendor/libs/jquery/jquery.js"></script>
+<script src="/assets/Accounts/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+<script src="/assets/Accounts/assets/vendor/libs/quill/katex.js"></script>
+<script src="/assets/Accounts/assets/vendor/libs/quill/quill.js"></script>
+<script src="/assets/Accounts/assets/vendor/libs/select2/select2.js"></script>
+<script src="/assets/Accounts/assets/vendor/libs/dropzone/dropzone.js"></script>
+<script src="/assets/Accounts/assets/vendor/libs/jquery-repeater/jquery-repeater.js"></script>
+<script src="/assets/Accounts/assets/vendor/libs/flatpickr/flatpickr.js"></script>
+<script src="/assets/Accounts/assets/vendor/libs/tagify/tagify.js"></script>
+<script src="/assets/Accounts/assets/js/forms-file-upload.js"></script>
+<script src="/assets/Accounts/assets/js/app-ecommerce-product-add.js"></script>
+
+
+<script>
+    function SaveProject(){
+        saveProject();
+    }
+    function saveProject() {
+        var formData = new FormData();
+
+        // Get form values
+        formData.append("ProjectTitle", $('#projectTite').val());
+        formData.append("ProjectType", $('#projectType').val());
+        formData.append("ProjectDescription", $('.projectDescription').html());
+        formData.append("CreatedBy", "GUID_HERE");  // Replace with actual GUID
+        formData.append("ModifiedBy", "GUID_HERE"); // Replace with actual GUID
+        formData.append("ModifiedDate", new Date().toISOString());
+
+        // Get Feature Image from Dropzone
+        var featureImageDropzone = Dropzone.forElement("#dropzone-basic");
+        if (featureImageDropzone.files.length > 0) {
+            formData.append("FeatureImage", featureImageDropzone.files[0]);
+        }
+
+        // Get Gallery Images from Dropzone
+        var galleryImagesDropzone = Dropzone.forElement("#dropzone-multi");
+        for (var i = 0; i < galleryImagesDropzone.files.length; i++) {
+            formData.append("GalleryImages", galleryImagesDropzone.files[i]);
+        }
+
+        // AJAX Request
+        $.ajax({
+            url: "/Dashboard/NewProject",
+            type: "POST",
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (response) {
+                alert("Project saved successfully!");
+                window.location.href = "/Dashboard/Projects"; // Redirect after success
+            },
+            error: function (xhr, status, error) {
+                console.error("Error saving project:", error);
+                alert("Failed to save project. Please try again.");
+            }
+        });
+    }
+
+
+</script>

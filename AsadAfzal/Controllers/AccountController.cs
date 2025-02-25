@@ -26,7 +26,7 @@ namespace AsadAfzal.Controllers
         {
             if (User.Identity.IsAuthenticated) // Check if user is already logged in
             {
-                return RedirectToAction("Index", "Account"); // Redirect to Dashboard
+                return RedirectToAction("Index", "Dashboard"); // Redirect to Dashboard
             }
             return View();
         }
@@ -40,7 +40,7 @@ namespace AsadAfzal.Controllers
             var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
 
             if (result.Succeeded)
-                return RedirectToAction("Index", "Account");
+                return RedirectToAction("Index", "Dashboard");
 
             ModelState.AddModelError("", "Invalid login attempt.");
             return View(model);
@@ -61,7 +61,7 @@ namespace AsadAfzal.Controllers
             if (result.Succeeded)
             {
                 await _signInManager.SignInAsync(user, isPersistent: false);
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Dashboard");
             }
 
             foreach (var error in result.Errors)

@@ -1,5 +1,7 @@
 using AsadAfzal.DBFactory.Context;
 using AsadAfzal.Helpers;
+using AsadAfzal.Repository;
+using AsadAfzal.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -27,7 +29,8 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.LoginPath = "/Account/Login";
     options.AccessDeniedPath = "/Account/AccessDenied";
 });
-
+builder.Services.AddScoped<IProjectServices, ProjectServices>();
+builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
 
 // Add services to the container.
 builder.Services.AddHttpContextAccessor();

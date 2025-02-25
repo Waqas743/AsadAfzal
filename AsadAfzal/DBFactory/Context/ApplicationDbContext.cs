@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using AsadAfzal.DBFactory.Domains;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace AsadAfzal.DBFactory.Context
@@ -9,5 +10,7 @@ namespace AsadAfzal.DBFactory.Context
            : base(options)
         {
         }
+        public DbSet<Projects> Projects { get; set; }
+        public DbSet<Document> Documents { get; set; }
     }
 }

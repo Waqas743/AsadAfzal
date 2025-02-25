@@ -5,7 +5,6 @@ using System.Diagnostics;
 
 namespace AsadAfzal.Controllers
 {
-    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -49,7 +48,7 @@ namespace AsadAfzal.Controllers
         {
             return View();
         }
-
+        
         public IActionResult Projects()
         {
             ViewBag.ShowHeader = false;
